@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+:root{
+    --verydgblue: hsl(217, 19%, 35%);
+    --desdarkblue: hsl(214, 17%, 51%);
+    --grayishblue: hsl(212, 23%, 69%);
+    --lightgrayblue: hsl(210, 46%, 95%);
+}
+body{
+    font-family: 'Manrope';
+    background-color: var(--lightgrayblue);
+}
+/* main styling */
+.container{
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    line-height: 1.6em;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-shadow: 0px 8px 14px var(--grayishblue);
+    border-radius: 10px;
+    background-color: white;
+}
+.open-share{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 84%;
+    bottom: 0;
+    left: -1000px;
+    overflow-x: hidden;
+    margin-top: 80px;
+    visibility: hidden;
+    border-radius:0 0 10px 10px;
+    padding: 2.5% 8%;
+    transition: all 0.4s ease-in-out;
+    background-color: var(--verydgblue);
+}
+.open-share.clicked{
+    visibility: visible;
+    left: 0px;
+    overflow: auto;
+}
+.pre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+}
+.pre a img{
+    width: 100%;
+    display: flex;
+    gap: 4%;
+}
+.pre p{
+    color: var(--desdarkblue);
+    letter-spacing: 0.6em;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+.img img{
+    width: 100%;
+    height: 220px;
+    border-radius: 10px 10px 0 0;
+}
+.open-share .loaded img{
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+.loaded{
+    width: fit-content;
+    padding: 10px;
+    border-radius: 200%;
+    background-color: var(--desdarkblue);
+}
+.contents{
+    padding: 8%;
+}
+.t1{
+    color:var(--verydgblue);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.s1{
+    color: var(--desdarkblue);
+    font-weight: 500;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.her{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:2% 8%;
+    margin-top: -80px;
+    justify-content: space-between;
+}
+.her .final img{
+    width: 100%;
+    display: flex;
+}
+.h{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.her.upon{
+    display: none;
+}
+.avatar{
+    width: 100%;
+    position: relative;
+}
+.avatar img{
+    width: 55px;
+    border-radius: 100%;
+}
+.details span{
+    display: block;
+    color: var(--grayishblue);
+    font-weight: 700;
+}
+.triangle.try{
+    display: none;
+}
+.details p{
+    color: var(--verydgblue);
+    font-weight: 700;
+}
+.share{
+    width: fit-content;
+    background-color: var(--lightgrayblue);
+    padding: 12px;
+    border-radius: 200%;
+}
+.share.long{
+    display: flex;
+}
+.final{
+    display: none;
+}
+.final.unlocked{
+    width: fit-content;
+    padding: 12px;
+    border-radius: 200%;
+    background-color: var(--desdarkblue);
+    cursor: pointer;
+    display: none;
+}
+.share img{
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+}
+@media (min-width:500px){
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .her.upon{
+        display: none;
+    }
+    .img img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+    .open-share{
+        padding: 3% 8%;
+        border-radius: 0 0 12px 0;
+    }
+    .open-share.clicked{
+        display: flex;
+    }
+    .triangle.try{
+        display: flex;
+    }
+    .share.long{
+        display: flex;
+    }
+    .final.unlocked{
+        display: none;
+    }
+}
+@media (min-width:950px){
+    .container{
+        width: 800px;
+    }
+    .pre{
+        width: 100%;
+    }
+    .pre a img{
+        width: 30px;
+    }
+    .open-share{
+        width: 200px;
+        bottom: 100px;
+        margin-left: 64%;
+        padding: 10px 20px;
+        border-radius:12px ;
+        box-shadow:0px 8px 14px var(--grayishblue);
+    }
+    .open-share.clicked{
+        display: block;
+    }
+    .final.unlocked{
+        display: block;
+    }
+    .share.long{
+        display: none;
+    }
+    .triangle.try{
+        width: 0;
+        left: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 20px solid var(--verydgblue);
+        transition: all 0.4s ease-in-out;
+        display: flex;
+        position: absolute;
+        margin-top: -16%;
+        z-index:1;
+        left: 86%;
+    }
+    .loaded{
+        display: none;
+    }
+    .her.upon{
+        display: flex;
+    }
+}
